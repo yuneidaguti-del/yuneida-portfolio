@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Content & UGC | Yuneida Gutierrez</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Yuneida Gutierrez</a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="ugc.html" class="active">Content & UGC</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <span class="section-tag">Content & UGC</span>
+  <h1>Authentic content made<br>for your <em>brand.</em></h1>
+  <p>User-generated content that feels real : because it is. I create scroll-stopping UGC for ads, social, and product pages that converts without looking like an ad.</p>
+</div>
+
+<section class="services reveal">
+  <div class="services-grid" style="grid-template-columns: repeat(3,1fr);">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-icon">◈</div>
+      <div class="service-title">Creator Collaboration</div>
+      <p class="service-desc">Custom content created for brands and partners, posted directly on my social media channels. Reach an engaged, trust-driven audience through authentic storytelling that feels native, not like an ad.</p>
+      <div class="service-tags">
+        <span class="service-tag">Sponsored Content</span>
+        <span class="service-tag">Brand Partnerships</span>
+        <span class="service-tag">Instagram</span>
+        <span class="service-tag">TikTok</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-icon">◎</div>
+      <div class="service-title">UGC Content</div>
+      <p class="service-desc">Photo and video content with an authentic, creator-style feel, built for ads, e-commerce, and social proof. Short-form videos for Meta, TikTok, and YouTube alongside lifestyle and product photography that does not look over-produced.</p>
+      <div class="service-tags">
+        <span class="service-tag">Photo & Video</span>
+        <span class="service-tag">Reels & TikTok</span>
+        <span class="service-tag">Meta Ads</span>
+        <span class="service-tag">E-commerce</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-icon">✦</div>
+      <div class="service-title">Paid Usage & Ad Licensing</div>
+      <p class="service-desc">High-performing content licensed for paid advertising across Meta, TikTok, and other platforms. Includes clear usage terms so brands can confidently repurpose my content for campaigns, ads, and product pages.</p>
+      <div class="service-tags">
+        <span class="service-tag">Usage Rights</span>
+        <span class="service-tag">Whitelisting</span>
+        <span class="service-tag">Paid Ads</span>
+        <span class="service-tag">Licensing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <span>© 2026 Yuneida Gutierrez. All rights reserved.</span>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/yuneidaguti/" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@yuneidaguti" target="_blank">TikTok</a>
+    <a href="https://www.linkedin.com/in/yuneidagutierrez/" target="_blank">LinkedIn</a>
+    <a href="mailto:yuneida.guti@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+<script src="chat-widget.js"></script>
+</body>
+</html>

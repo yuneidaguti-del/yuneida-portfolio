@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Services | Yuneida Gutierrez</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Yuneida Gutierrez</a>
+  <ul class="nav-links">
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="ugc.html">Content & UGC</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <span class="section-tag">What I Offer</span>
+  <h1>Services that grow<br>your <em>presence.</em></h1>
+  <p>From content creation to full social media management, I offer everything your brand needs to show up consistently and compellingly online.</p>
+</div>
+
+<section class="services reveal">
+  <div class="services-grid" style="grid-template-columns: repeat(2,1fr);">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-icon">◎</div>
+      <div class="service-title">Social Media Management</div>
+      <p class="service-desc">Full-service social media management : content calendars, posting, community engagement, and analytics so your brand stays consistent and grows month over month.</p>
+      <div class="service-tags">
+        <span class="service-tag">Scheduling</span>
+        <span class="service-tag">Community</span>
+        <span class="service-tag">Analytics</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-icon">◉</div>
+      <div class="service-title">Influencer Management</div>
+      <p class="service-desc">End-to-end influencer partnerships including talent scouting, outreach, negotiations, contracts, campaign coordination, deliverables management, and reporting.</p>
+      <div class="service-tags">
+        <span class="service-tag">Talent Sourcing</span>
+        <span class="service-tag">Negotiations</span>
+        <span class="service-tag">Contracts</span>
+        <span class="service-tag">Campaigns</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-icon">✦</div>
+      <div class="service-title">Art Direction & Strategy</div>
+      <p class="service-desc">Creative vision and strategic direction for shoots, campaigns, and brand aesthetics. I help you define a visual language that's consistent, compelling, and uniquely yours.</p>
+      <div class="service-tags">
+        <span class="service-tag">Art Direction</span>
+        <span class="service-tag">Brand Strategy</span>
+        <span class="service-tag">Moodboards</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div class="service-icon">◈</div>
+      <div class="service-title">Content Creation</div>
+      <p class="service-desc">Photo, video, and written content built for the platforms your audience actually uses : Instagram, TikTok, YouTube, and beyond. Authentic, on-brand, and made to perform.</p>
+      <div class="service-tags">
+        <span class="service-tag">Photo & Video</span>
+        <span class="service-tag">Reels & TikTok</span>
+        <span class="service-tag">Copywriting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <span>© 2026 Yuneida Gutierrez. All rights reserved.</span>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/yuneidaguti/" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@yuneidaguti" target="_blank">TikTok</a>
+    <a href="https://www.linkedin.com/in/yuneidagutierrez/" target="_blank">LinkedIn</a>
+    <a href="mailto:yuneida.guti@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+<script src="chat-widget.js"></script>
+</body>
+</html>

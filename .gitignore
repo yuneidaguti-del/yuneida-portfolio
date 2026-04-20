@@ -1,0 +1,6 @@
+.env
+r2_manifest.json
+upload_to_r2.py
+update_r2_urls.py
+.DS_Store
+**/.DS_Store
