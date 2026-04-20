@@ -22,7 +22,7 @@
     min-height: 360px;
   }
 
-  /* Cover photo — always visible */
+  /* Cover photo */
   .client-card .card-photo {
     position: absolute; inset: 0;
     width: 100%; height: 100%;
@@ -33,20 +33,7 @@
     backface-visibility: hidden;
     filter: contrast(1.06) saturate(1.1);
   }
-
-  /* Cover video — hidden at rest, crossfades in on hover */
-  .client-card .card-video {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.45s ease;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    filter: contrast(1.08) saturate(1.12);
-  }
-  .client-card:hover .card-photo { opacity: 0; }
-  .client-card:hover .card-video  { opacity: 0.82; }
+  .client-card:hover .card-photo { opacity: 0.82; filter: contrast(1.08) saturate(1.14); }
 
   /* Hover-to-play badge */
   .card-play-hint {
@@ -205,7 +192,6 @@
     <!-- SOLACE -->
     <div class="client-card small" data-client="solace">
       <img class="card-photo" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/cover.jpeg" alt="Wellness by Solace" />
-      <video class="card-video" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/sauna.mp4" muted playsinline loop preload="metadata" style="object-position: center 40%;"></video>
       <div class="client-card-label">
         <div class="client-service">Art Direction &amp; Social Media Management</div>
         <div class="client-name">Wellness by Solace</div>
@@ -213,21 +199,9 @@
       </div>
     </div>
 
-    <!-- SOLACE FLOAT -->
-    <div class="client-card small" data-client="solacefloat">
-      <img class="card-photo" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Solace%20Float/cover.jpg" alt="Solace Float" />
-      <video class="card-video" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Solace%20Float/%40octcaizum.mp4" muted playsinline loop preload="metadata"></video>
-      <div class="client-card-label">
-        <div class="client-service">Art Direction &amp; Influencer Management</div>
-        <div class="client-name">Solace Float</div>
-        <span class="client-cta">View Work</span>
-      </div>
-    </div>
-
     <!-- ALLSWELL -->
     <div class="client-card small" data-client="allswell">
       <img class="card-photo" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/cover.jpg" alt="Allswell" />
-      <video class="card-video" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40classyandkate.mp4" muted playsinline loop preload="metadata"></video>
       <div class="client-card-label">
         <div class="client-service">Influencer Management &amp; Social Media Strategy</div>
         <div class="client-name">Allswell</div>
@@ -238,10 +212,19 @@
     <!-- BRIGGS & RILEY -->
     <div class="client-card small" data-client="briggs">
       <img class="card-photo" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/cover.jpg" alt="Briggs &amp; Riley" />
-      <video class="card-video" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/%40tiffpenguin%E2%81%A01.mp4" muted playsinline loop preload="metadata"></video>
       <div class="client-card-label">
         <div class="client-service">Influencer Management</div>
         <div class="client-name">Briggs &amp; Riley</div>
+        <span class="client-cta">View Work</span>
+      </div>
+    </div>
+
+    <!-- SOLACE FLOAT -->
+    <div class="client-card small" data-client="solacefloat">
+      <img class="card-photo" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Solace%20Float/cover.jpg" alt="Solace Float" />
+      <div class="client-card-label">
+        <div class="client-service">Art Direction &amp; Influencer Management</div>
+        <div class="client-name">Solace Float</div>
         <span class="client-cta">View Work</span>
       </div>
     </div>
@@ -551,13 +534,6 @@
   }, { threshold: 0.1 });
   reveals.forEach(r => observer.observe(r));
 
-  // Card cover video on hover (targets .card-video only)
-  document.querySelectorAll('.client-card').forEach(card => {
-    const video = card.querySelector('.card-video');
-    if (!video) return;
-    card.addEventListener('mouseenter', () => video.play());
-    card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
-  });
 
   // Open modal on card click
   document.querySelectorAll('.client-card').forEach(card => {
