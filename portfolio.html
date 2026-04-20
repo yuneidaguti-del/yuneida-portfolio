@@ -155,14 +155,20 @@
 
   .feed-play {
     position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.5rem;
     pointer-events: none;
     transition: opacity 0.3s;
   }
   .feed-play svg {
-    width: 30px; height: 30px;
-    fill: rgba(255,255,255,0.85);
+    width: 28px; height: 28px;
+    fill: rgba(255,255,255,0.9);
     filter: drop-shadow(0 1px 6px rgba(0,0,0,0.5));
+  }
+  .feed-play span {
+    font-size: 0.55rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
   }
   .feed-item-video:hover .feed-play { opacity: 0; }
 
@@ -200,10 +206,20 @@
     <div class="client-card small" data-client="solace">
       <img class="card-photo" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/cover.jpeg" alt="Wellness by Solace" />
       <video class="card-video" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/sauna.mp4" muted playsinline loop preload="metadata" style="object-position: center 40%;"></video>
-      <div class="card-play-hint"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Hover to play</div>
       <div class="client-card-label">
         <div class="client-service">Art Direction &amp; Social Media Management</div>
         <div class="client-name">Wellness by Solace</div>
+        <span class="client-cta">View Work</span>
+      </div>
+    </div>
+
+    <!-- SOLACE FLOAT -->
+    <div class="client-card small" data-client="solacefloat">
+      <img class="card-photo" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Solace%20Float/cover.jpg" alt="Solace Float" />
+      <video class="card-video" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Solace%20Float/%40octcaizum.mp4" muted playsinline loop preload="metadata"></video>
+      <div class="client-card-label">
+        <div class="client-service">Influencer Management &amp; Social Media Management</div>
+        <div class="client-name">Solace Float</div>
         <span class="client-cta">View Work</span>
       </div>
     </div>
@@ -212,7 +228,6 @@
     <div class="client-card small" data-client="allswell">
       <img class="card-photo" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/cover.jpg" alt="Allswell" />
       <video class="card-video" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40classyandkate.mp4" muted playsinline loop preload="metadata"></video>
-      <div class="card-play-hint"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Hover to play</div>
       <div class="client-card-label">
         <div class="client-service">Influencer Management &amp; Social Media Strategy</div>
         <div class="client-name">Allswell</div>
@@ -224,22 +239,9 @@
     <div class="client-card small" data-client="briggs">
       <img class="card-photo" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/cover.jpg" alt="Briggs &amp; Riley" />
       <video class="card-video" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/%40tiffpenguin%E2%81%A01.mp4" muted playsinline loop preload="metadata"></video>
-      <div class="card-play-hint"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Hover to play</div>
       <div class="client-card-label">
         <div class="client-service">Influencer Management</div>
         <div class="client-name">Briggs &amp; Riley</div>
-        <span class="client-cta">View Work</span>
-      </div>
-    </div>
-
-    <!-- SOLACE FLOAT -->
-    <div class="client-card small" data-client="solacefloat">
-      <img class="card-photo" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Solace%20Float/cover.jpg" alt="Solace Float" />
-      <video class="card-video" src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Solace%20Float/%40octcaizum.mp4" muted playsinline loop preload="metadata"></video>
-      <div class="card-play-hint"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Hover to play</div>
-      <div class="client-card-label">
-        <div class="client-service">Influencer Management &amp; Social Media Management</div>
-        <div class="client-name">Solace Float</div>
         <span class="client-cta">View Work</span>
       </div>
     </div>
@@ -259,14 +261,14 @@
       <!-- Row 1: V P V -->
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/1688451508321153.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/Garden%20Shower%202%20R3.jpeg" alt="Wellness by Solace" />
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/1688632507013864.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
 
       <!-- Row 2: P V V -->
@@ -275,38 +277,38 @@
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/1691557783143077.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/1691557783143077.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
 
       <!-- Row 3: V P V -->
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/Copy%20of%2020230208-155059-720.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/POV%202%20R2.jpg" alt="Wellness by Solace" />
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/sauna.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
 
       <!-- Row 4: V V V -->
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/20221101-172938-370.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/Bought%20it%20once%2C%20enjoy%20it%20forever.%20%F0%9F%92%99Your%20wellness%20journey%20continues%20with%20Solace.%20From%20monthly%20ma.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Wellness%20by%20Solace/Bringing%20Luxury%20Wellness%20to%20Life-%20The%20Solace%20Sauna%20Installation%20ProcessSolace%20Saunas%20are%20designe.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
 
     </div>
@@ -328,7 +330,7 @@
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40camille.munday.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40bohemianrefuge.jpg" alt="Allswell" />
@@ -337,14 +339,14 @@
       <!-- Row 2: V P V -->
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40gingeriley.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40campcaitlin.jpg" alt="Allswell" />
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40kikithegypsy.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
 
       <!-- Row 3: P V P -->
@@ -353,7 +355,7 @@
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40aubreyhearty%E2%81%A0.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40plantkween.jpg" alt="Allswell" />
@@ -362,14 +364,14 @@
       <!-- Row 4: V P V -->
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40classyandkate.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40gingeriley.jpg" alt="Allswell" />
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Allswell/%40foreverjenypher.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
 
       <!-- Row 5: P P P -->
@@ -410,7 +412,7 @@
       <!-- Row 1: V P P (was row 4) -->
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/%40tiffpenguin.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/%40the_essentialist_.jpg" alt="Briggs &amp; Riley" />
@@ -425,7 +427,7 @@
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/%40tiffpenguin.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/%40compassandtwine1.jpg" alt="Briggs &amp; Riley" />
@@ -445,7 +447,7 @@
       <!-- Row 4: V P P — mirrors row 1 -->
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/%40nicoledesantisre%E2%81%A0%20.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/%40compassandtwine.jpg" alt="Briggs &amp; Riley" />
@@ -460,7 +462,7 @@
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/%40jasminealley%E2%81%A0.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/%40jasminealley%E2%81%A0.webp" alt="Briggs &amp; Riley" />
@@ -475,7 +477,7 @@
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Briggs%20%26%20Riley/%40thenexttrip%E2%81%A0.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
 
     </div>
@@ -495,7 +497,7 @@
       <!-- Row 1: V P P -->
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Solace%20Float/%40octcaizum.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Solace%20Float/imgi_2_503119188_30127320803548532_3904323163409866775_n.jpg" alt="Solace Float" />
@@ -510,7 +512,7 @@
       </div>
       <div class="feed-item feed-item-video">
         <video src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Solace%20Float/%40tripseatravellers%20.mp4" muted playsinline loop preload="metadata"></video>
-        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="feed-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>Hover to play</span></div>
       </div>
       <div class="feed-item feed-item-photo">
         <img src="https://pub-df00f54d297446b9a93ee43e7eba0e5e.r2.dev/Solace%20Float/imgi_2_622288786_18073020164120379_5739372923882553466_n.jpg" alt="Solace Float" />
