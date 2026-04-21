@@ -2,7 +2,7 @@
   const EMAIL = 'yuneida.guti@gmail.com';
 
   const styles = `
-    #chat-widget { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; font-family: 'DM Sans', sans-serif; }
+    #chat-widget { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; font-family: 'DM Sans', sans-serif; transition: bottom 0.15s ease; }
 
     #chat-btn {
       display: flex; align-items: center; gap: 0.6rem;
@@ -176,4 +176,21 @@
 
   sendBtn.addEventListener('click', sendMessage);
   input.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
+
+  // Keep button above footer when footer scrolls into view
+  function adjustWidgetPosition() {
+    const footer = document.querySelector('footer');
+    const w = document.getElementById('chat-widget');
+    if (!footer || !w) return;
+    const footerTop = footer.getBoundingClientRect().top;
+    const vh = window.innerHeight;
+    if (footerTop < vh) {
+      w.style.bottom = (vh - footerTop) + 'px';
+    } else {
+      w.style.bottom = '2rem';
+    }
+  }
+  window.addEventListener('scroll', adjustWidgetPosition, { passive: true });
+  window.addEventListener('resize', adjustWidgetPosition);
+  adjustWidgetPosition();
 })();

@@ -212,7 +212,7 @@ h1 em { font-style: italic; color: var(--terracotta); }
 }
 
 /* WORK */
-.work { padding: 7rem 4rem; background: var(--cream); }
+.work { padding: 7rem 4rem; background: var(--warm-white); }
 .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 4rem; }
 .work-card {
   position: relative; overflow: hidden; cursor: pointer;
